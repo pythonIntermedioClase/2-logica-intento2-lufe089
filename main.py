@@ -21,11 +21,7 @@ from src.utils import formatear_reporte_valor
 from src.utils import mostrar_resultado
 from src.utils import generar_ficha_contribuyente
 
-from src.utils import limpiar_nit
-from src.utils import validar_nit
-from src.utils import normalizar_texto
-from src.utils import procesar_nit
-from src.utils import pipeline_nit
+
 
 from src.utils import esta_al_dia
 from src.utils import aplicar_descuento
@@ -72,11 +68,11 @@ from src.utils import buscar_por_nit
 def menu_funciones_basicas():
     """Sección 1: funciones y procedimientos con tipos simples."""
     print("\n--- Funciones básicas ---")
-
-    # TODO: descomenta cuando hayas completado calcular_iva
-    # valor = 1_500_000
-    # iva = calcular_iva(valor)
-    # mostrar_resultado("IVA sobre $1,500,000", iva)
+   
+    valor = 800000
+    iva = calcular_iva(valor)
+        
+    mostrar_resultado(f"IVA sobre ${valor:,.0f}", iva)
 
     # TODO: descomenta cuando hayas completado formatear_reporte_valor
     # linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
@@ -111,7 +107,7 @@ def menu_encadenamiento():
 def menu_condicionales_simples():
     """Sección 3: condicionales simples."""
     print("\n--- Condicionales simples ---")
-
+    print("Mi nombre es Luisa y estoy en el menu de condiciones simples")
     # TODO: descomenta cuando hayas completado esta_al_dia
     # casos_mora = [0, 1, 30, 90]
     # for dias in casos_mora:
@@ -277,6 +273,8 @@ def menu_diccionarios():
 # Menú principal
 # ---------------------------------------------------------------------------
 
+
+
 OPCIONES = {
     "1": ("Funciones básicas",            menu_funciones_basicas),
     "2": ("Encadenamiento de funciones",  menu_encadenamiento),
@@ -324,4 +322,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+   main()
